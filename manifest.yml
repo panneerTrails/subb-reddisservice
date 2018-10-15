@@ -1,0 +1,16 @@
+---
+applications:
+- name: RedisService
+  instance: 1
+  host: myRedis
+  path: build\libs\RedisService-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  services:
+    - test-eureka
+    - test-redis
+  env:
+     JBP_CONFIG_DEBUG: '{enabled: true}'
+
+
+
+
